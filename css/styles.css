@@ -119,11 +119,13 @@ body {
   width: 140px;
 }
 
-.slaider__btn:hover {
+.slaider__btn:hover,
+.servese__btn:hover {
   background: #e74246;
 }
 
-.slaider__btn:active {
+.slaider__btn:active,
+.servese__btn:active {
   background: #d7373b;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -160,14 +162,152 @@ body {
 
 /*serveses*/
 
-.servese__btn {
+.serveses {
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+.serveses_block {
   display: flex;
-  color: #fff;
+  justify-content: space-between;
+  padding-right: 60px;
+  width: 1140px;
+}
+
+.servese_block {
+  width: 300px;
+}
+
+.servese__title {
+  text-transform: uppercase;
+}
+
+.servese__text {
+  color: #283136;
+}
+
+.servese__btn {
   background: #fb565a;
   border-radius: 3px;
+  display: flex;
+  color: #fff;
   line-height: 24px;
   padding: 15px 40px 15px 40px;
+  margin-top: 35px;
   text-decoration: none;
   text-transform: uppercase;
   width: 80px;
+}
+
+.btn--green {
+  background: #00ca74;
+}
+
+.btn--green:hover {
+  background: #00bc6c;
+}
+
+.btn--green:active {
+  background: #00aa62;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn--yellow {
+  background: #efc84a;
+}
+
+.btn--yellow:hover {
+  background: #eab534;
+}
+
+.btn--yellow:active {
+  background: #e5a722;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/*statistic*/
+
+.statistic {
+  border-top: 2px solid #eeeeee;
+}
+
+.statistic_block--one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 70px;
+  width: 700px;
+}
+
+.statistic__slogan {
+  font-size: 45px;
+  font-weight: medium;
+  line-height: 45px;
+  margin-bottom: 25px;
+}
+
+.statistic__text {
+  color: #283136;
+  line-height: 24px;
+}
+
+.statistic__title {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.statistic__tasks {
+  list-style: none;
+  position: relative;
+}
+
+.statistic__task {
+  color: #283136;
+  padding-top: 25px;
+}
+
+.task--first::before {
+  background: #fb565a;
+  content: '';
+  height: 2px;
+  left: 5px;
+  position: absolute;
+  top: 40px;
+  width: 25px;
+}
+
+.task--second::before {
+  background: #fb565a;
+  content: '';
+  height: 2px;
+  left: 5px;
+  position: absolute;
+  top: 93px;
+  width: 25px;
+}
+
+.task--third::before {
+  background: #fb565a;
+  content: '';
+  height: 2px;
+  left: 5px;
+  position: absolute;
+  top: 148px;
+  width: 25px;
+}
+
+.table__title {
+  text-transform: uppercase;
+}
+
+.table__procents {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 10px;
+  width: 100px;
+}
+
+.table__discription {
+  color: #283136;
+  line-height: 18px;
 }
