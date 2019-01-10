@@ -502,6 +502,10 @@ body {
   width: 220px;
 }
 
+.map__google {
+  width: 100%;
+}
+
 /*footer*/
 
 .footer_block {
@@ -576,18 +580,59 @@ body {
 /*write-us*/
 
 .write-us_block {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .75);
-  height: 435px;
-  padding: 60px 80px 85px 100px;
-  width: 780px;
-  border: 1px solid black;
-  margin-bottom: 30px;
+  background: #fff;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, .75);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, .75);
+  display: none;
+  height: 590px;
+  left: 120px;
+  position: absolute;
+  top: -550px;
+  z-index: 1;
+  width: 960px;
+}
+
+.write__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 100px 85px 100px;
+}
+
+.wrapper__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.wrapper__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .write__title {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
+  margin-left: 100px;
+  margin-bottom: 40px;
+  padding-top: 35px;
 }
 
 .write__btn--close {
@@ -597,6 +642,9 @@ body {
   font-size: 4px;
   height: 23px;
   opacity: .3;
+  right: 95px;
+  position: absolute;
+  top: 85px;
   width: 23px;
 }
 
@@ -611,9 +659,17 @@ body {
 .write__info label {
   font-weight: bold;
   line-height: 18px;
+  padding-bottom: 10px;
 }
 
-.write__info input,
+.write__name,
+.write__email {
+  height: 22px;
+  width: 326px;
+}
+
+.write__name,
+.write__email,
 .write__text {
   border: 2px solid #d7dcde;
   border-radius: 3px;
@@ -621,7 +677,9 @@ body {
 }
 
 .write__text {
-  width: 100%;
+  height: 92px;
+  margin-bottom: 45px;
+  width: 726px;
 }
 
 .form__btn {
