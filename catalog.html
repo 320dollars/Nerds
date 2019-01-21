@@ -26,6 +26,7 @@
       <div class="title__box">
         <h1 class="catalog__title">Магазин готовых шаблонов</h1>
       </div>
+      <div class="container catalog__page">
       <section>
         <h2 class="hidden-title">Фильтр</h2>
         <form class="filter__block" action="index.html" method="post">
@@ -71,6 +72,7 @@
           <button class="filter__btn" type="button" name="button">Показать</button>
         </form>
       </section>
+      <div class="main--box">
       <section class="sort__block">
         <h2 class="sort__title">Сортировать</h2>
         <ul class="sort__options">
@@ -79,84 +81,112 @@
           <li><a class="sort__type" href="#">По названию</a></li>
         </ul>
         <ul class="sort__tri">
-          <li><a class="tri tri--down" href="#">down</a></li>
+          <li><a class="tri tri--down tri--active" href="#">down</a></li>
           <li><a class="tri tri--up" href="#">up</a></li>
         </ul>
       </section>
-      <section>
-        <div class="">
+      <section class="projects_block">
+        <div class="project_block">
           <img src="images/img-sedona.jpg" alt="sedona" width="360" height="575">
-          <div class="">
-            <h3>Sedona</h3>
-            <p>Информационный сайт для туристов</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">Sedona</h3>
+            <p class="project__text">Информационный сайт для туристов</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
-        <div class="">
+        <div class="project_block">
           <img src="images/img-pink.jpg" alt="Pink" width="360" height="575">
-          <div class="">
-            <h3>Pink app</h3>
-            <p>Продуктовый лендинг приложения для iOS и Android</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">Pink app</h3>
+            <p class="project__text">Продуктовый лендинг приложения для iOS и Android</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
-        <div class="">
+        <div class="project_block">
           <img src="images/img-barbershop.jpg" alt="Barbershop" width="360" height="575">
-          <div class="">
-            <h3>Barbershop</h3>
-            <p>Сайт салоны красоты. Для мужчин, да.</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">Barbershop</h3>
+            <p class="project__text">Сайт салоны красоты. Для мужчин, да.</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
-        <div class="">
+        <div class="project_block">
           <img src="images/img-mishka.jpg" alt="Mishka" width="360" height="575">
-          <div class="">
-            <h3>Mishka</h3>
-            <p>Интернет-магазин вязаных игрушек</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">Mishka</h3>
+            <p class="project__text">Интернет-магазин вязаных игрушек</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
-        <div class="">
+        <div class="project_block">
           <img src="images/img-aplus.jpg" alt="aplus" width="360" height="575">
-          <div class="">
-            <h3>A PLUS</h3>
-            <p>Лендинг курсов повышения квалификации</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">A PLUS</h3>
+            <p class="project__text">Лендинг курсов повышения квалификации</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
-        <div class="">
+        <div class="project_block">
           <img src="images/img-kvast.jpg" alt="kvast" width="360" height="575">
-          <div class="">
-            <h3>Кваст</h3>
-            <p>Промо-сайт производителя крафтового кваса</p>
-            <button type="button" name="button">9900 руб.</button>
+          <div class="project__box">
+            <h3 class="project__title">Кваст</h3>
+            <p class="project__text">Промо-сайт производителя крафтового кваса</p>
+            <button class="project__btn" type="button" name="button">9900 руб.</button>
           </div>
         </div>
       </section>
-      <ul>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">Следующая</a></li>
+      <ul class="projects__pagination">
+        <li><a class="pag__item pag--active" href="#">1</a></li>
+        <li><a class="pag__item" href="#">2</a></li>
+        <li><a class="pag__item" href="#">3</a></li>
+        <li><a class="pag__item item--next" href="#">Следующая</a></li>
       </ul>
-      <section>
-        <img src="images/map.jpg" alt="map" width="1440" height="415">
-        <div class="">
-          <h3>NЁRDS DESIGN STUDIO</h3>
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          <span>тел. +7 (812) 275-75-75</span>
-          <a href="#">Напиши нам</a>
+      </div>
+        </div>
+      <section class="contact">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123807!2d30.320894615830824!3d59.93879686904821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1546967512489" class="map__google" height="415" style="border:0" allowfullscreen></iframe>
+          <div class="container contact_block">
+          <section class="write-us_block">
+            <h2 class="write__title">Напишите нам</h2>
+            <button type="button" class="write__btn--close" name="close">Закрыть</button>
+            <form class="write__info" action="index.html" method="post">
+              <div class="wrapper__form">
+                <div class="wrapper__label">
+                  <label for="name">Ваше имя:</label>
+                  <input type="text" class="write__name" id="name" name="name" placeholder="Имя Фамилия">
+                </div>
+                <div class="wrapper__label">
+                  <label for="email">Ваш e-mail:</label>
+                  <input type="email" class="write__email" id="email" name="email" placeholder="email@example.com">
+                </div>
+              </div>
+              <label for="text">Текст письма:</label>
+              <textarea name="text" class="write__text" id="text" placeholder="В свободной форме"></textarea>
+              <button type="submit" class="form__btn" name="button">Отправить</button>
+            </form>
+          </section>
+        <div class="contacts__info">
+          <h3 class="contacts__title">NЁRDS DESIGN STUDIO</h3>
+          <p class="contacts__addres">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <span class="contacts__phone">тел. +7 (812) 275-75-75</span>
+          <a href="#" class="contacts__btn">Напиши нам</a>
+        </div>
         </div>
       </section>
     </main>
     <footer>
-      <ul>
-        <li><a href="#">Vkontacte</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
+      <div class="container footer_block">
+      <ul class="footer__social">
+        <li><a href="#" class="social__media">Vkontacte</a></li>
+        <li><a href="#" class="social__media media--facebook">Facebook</a></li>
+        <li><a href="#" class="social__media media--instagram">Instagram</a></li>
       </ul>
-      <b>Давайте дружить, это выгодно!</b>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <div class="footer__text">
+        <b class="footer__offer">Давайте дружить, это выгодно!</b>
+        <p class="footer__special">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
+      </div>
     </footer>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
