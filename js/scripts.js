@@ -27,7 +27,6 @@ modalCloseBtn.addEventListener('click', function(){
 });
 
 window.addEventListener('keydown', function(evt){
-  evt.preventDefault();
   if (evt.keyCode === PRESS_ESC) {
     modalWrite.classList.remove('write-us_block--show');
   }
