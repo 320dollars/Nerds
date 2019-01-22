@@ -11,11 +11,26 @@ var form = modalWrite.querySelector('.write__info');
 var firstSlide = document.querySelector('.slide--first');
 var secondSlide = document.querySelector('.slide--second');
 var thirdSlide = document.querySelector('.slide--third');
-var firstTog = document.querySelector('toggle--first');
-var secondTog = document.querySelector('toggle--second');
-var firstTog = document.querySelector('toggle--third');
+var firstTog = document.querySelector('.toggle--first');
+var secondTog = document.querySelector('.toggle--second');
+var thirdTog = document.querySelector('.toggle--third');
+var isStorageSupport = true;
+var storage = '';
 
-//Открытие-закрытие  модального окна
+/*Открытие-закрытие  модального окна*/
+try {
+  storage.localStorage.getItem('login');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+if (storage) {
+  nameInput.value = storage;
+  emailInput.focus();
+} else {
+  nameInput.focus();
+}
+
 writeBtn.addEventListener('click', function(evt){
   evt.preventDefault();
   modalWrite.classList.add('write-us_block--show');
@@ -31,20 +46,38 @@ window.addEventListener('keydown', function(evt){
     modalWrite.classList.remove('write-us_block--show');
   }
 });
-//----------------------------------------------------
 
-var changeSlide = function (togOn, togOff1, togOff2, slideOn, slidOff1, slideOff2) {
-  tog.addEventListener('click', function(evt){
+/*Слайдер*/
+var changeSlide = function (togOn, togOff1, togOff2, slideOn, slideOff1, slideOff2) {
+    togOn.addEventListener('click', function(evt){
     evt.preventDefault();
-    tog.classList.add('toggle--active');
-    slide.classList.remove('slide--hidden');
+    togOn.classList.add('toggle--active');
+    togOff1.classList.remove('toggle--active');
+    togOff2.classList.remove('toggle--active');
+    slideOn.classList.remove('slide--hidden');
+    slideOff1.classList.add('slide--hidden');
+    slideOff2.classList.add('slide--hidden');
   });
 }
 
+changeSlide(firstTog, secondTog, thirdTog, firstSlide, secondSlide, thirdSlide);
+changeSlide(secondTog, thirdTog, firstTog, secondSlide, thirdSlide, firstSlide);
+changeSlide(thirdTog, firstTog, secondTog, thirdSlide, firstSlide, secondSlide);
+
+/*Валидация*/
 form.addEventListener('submit', function(evt){
   if (!nameInput.value || !emailInput.value || !textInput.value ) {
     evt.preventDefault();
     modalWrite.classList.add('write--error');
     setTimeout(function (){modalWrite.classList.remove('write--error');}, 700);
+  }
+  if (!nameInput.value || nameInput.value < 2) {
+    nameInput.classList.add('write--unvalid');
+  }
+  if (!emailInput.value) {
+    emailInput.classList.add('write--unvalid');
+  }
+  if (!textInput.value) {
+    textInput.classList.add('write--unvalid');
   }
 });
