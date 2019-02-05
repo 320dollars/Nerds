@@ -46,8 +46,10 @@ body {
   width: 160px;
 }
 
-.header__logo:hover {
+.header__logo:hover,
+.header__logo:focus {
   background: url(../images/nerds-logo-hover.svg) no-repeat;
+  outline-color: transparent;
 }
 
 .header__logo:active {
@@ -68,16 +70,25 @@ body {
   padding-bottom: 10px;
   padding-left: 22px;
   padding-right: 22px;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-.item--active {
-  border-bottom: 2px solid #fb565a;
+.item--active::after {
+  background: #fb565a;
+  content: "";
+  height: 2px;
+  left: 20px;
+  position: absolute;
+  top: 22px;
+  width: 80px;
 }
 
-.nav__item:hover {
+.nav__item:hover,
+.nav__item:focus {
   color: #fb565a;
+  outline-color: transparent;
 }
 
 .nav__item:active {
@@ -157,8 +168,13 @@ body {
 .slaider__btn:hover,
 .servese__btn:hover,
 .contacts__btn:hover,
-.form__btn:hover {
+.form__btn:hover,
+.slaider__btn:focus,
+.servese__btn:focus,
+.contacts__btn:focus,
+.form__btn:focus {
   background: #e74246;
+  outline-color: transparent;
 }
 
 .slaider__btn:active,
@@ -250,8 +266,10 @@ body {
   background: #00ca74;
 }
 
-.btn--green:hover {
+.btn--green:hover,
+.btn--green:focus {
   background: #00bc6c;
+  outline-color: transparent;
 }
 
 .btn--green:active {
@@ -263,8 +281,10 @@ body {
   background: #efc84a;
 }
 
-.btn--yellow:hover {
+.btn--yellow:hover,
+.btn--yellow:focus {
   background: #eab534;
+  outline-color: transparent;
 }
 
 .btn--yellow:active {
@@ -419,32 +439,40 @@ body {
   background: url(../images/logo-1.png) no-repeat center;
 }
 
-.project--htmlacademy:hover {
+.project--htmlacademy:hover,
+.project--htmlacademy:focus {
   background: url(../images/logo-1-hover.png) no-repeat center;
+  outline-color: transparent;
 }
 
 .project--borodinski {
   background: url(../images/logo-2.png) no-repeat center;
 }
 
-.project--borodinski:hover {
+.project--borodinski:hover,
+.project--borodinski:focus {
   background: url(../images/logo-2-hover.png) no-repeat center;
+  outline-color: transparent;
 }
 
 .project--pink {
   background: url(../images/logo-3.png) no-repeat center;
 }
 
-.project--pink:hover {
+.project--pink:hover,
+.project--pink:focus {
   background: url(../images/logo-3-hover.png) no-repeat center;
+  outline-color: transparent;
 }
 
 .project--mishka {
   background: url(../images/logo-4.png) no-repeat center;
 }
 
-.project--mishka:hover {
+.project--mishka:hover,
+.project--mishka:focus {
   background: url(../images/logo-4-hover.png) no-repeat center;
+  outline-color: transparent;
 }
 
 /*contact*/
@@ -537,8 +565,10 @@ body {
   width: 80px;
 }
 
-.social__media:hover {
+.social__media:hover,
+.social__media:focus {
   background-color: #e74246;
+  outline-color: transparent;
 }
 
 .social__media:active {
@@ -594,6 +624,8 @@ body {
 }
 
 .write-us_block--show {
+  animation-name: arriveModal;
+  animation-duration: 1.5s;
   display: block;
 }
 
@@ -653,8 +685,10 @@ body {
   width: 23px;
 }
 
-.write__btn--close:hover {
+.write__btn--close:hover,
+.write__btn--close:focus {
   opacity: 1;
+  outline-color: transparent;
 }
 
 .write__btn--close:active {
@@ -711,6 +745,18 @@ body {
   border-radius: 3px;
   padding-bottom: 13px;
   padding-top: 13px;
+}
+
+@-webkit-keyframes arriveModal {
+  0% { opacity: .1;}
+  70% { opacity: .7;}
+  90% {opacity: .9;}
+}
+
+@keyframes arriveModal {
+  0% { opacity: .1;}
+  70% { opacity: .7;}
+  90% {opacity: .9;}
 }
 
 @-webkit-keyframes shake {
@@ -821,6 +867,12 @@ body {
 .range__box input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: url(../images/range.png) no-repeat;
+  height: 24px;
+  width: 19px;
+}
+
+.range__box input[type="range"]:hover::-webkit-slider-thumb {
+  background-size: cover;
   height: 25px;
   width: 20px;
 }
@@ -836,11 +888,13 @@ body {
           flex-direction: column;
   padding-top: 10px;
   min-height: 145px;
-  width: 280px;
+  width: 160px;
 }
 
 .filter__type label {
   font-size: 16px;
+  display: block;
+  height: 31px;
 }
 
 .filter__type input[type='radio'] {
@@ -864,12 +918,14 @@ body {
   height: 18px;
   left: 0px;
   position: absolute;
-  top: -3px;
+  top: 1px;
   width: 18px;
 }
 
-.filter__type input[type='radio']:hover + label::before {
+.filter__type input[type='radio']:hover + label::before,
+.filter__type input[type='radio']:focus + label::before {
   border-color:  #4f4f4f;
+  outline-color: transparent;
 }
 
 .filter__type input[type='radio'] + label::after {
@@ -880,15 +936,17 @@ body {
   left: 9px;
   opacity: 0;
   position: absolute;
-  top: 6px;
+  top: 10px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   width: 9px;
 }
 
-.filter__type input[type='radio']:hover + label::after {
+.filter__type input[type='radio']:hover + label::after,
+.filter__type input[type='radio']:focus + label::after {
   background-color: #4f4f4f;
+  outline-color: transparent;
 }
 
 .filter__type input[type='radio']:checked + label::after {
@@ -905,7 +963,12 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-top: 15px;
-  width: 280px;
+  width: 180px;
+}
+
+.filter__special label {
+  display: block;
+  height: 31px;
 }
 
 .filter__special input[type='checkbox'] {
@@ -929,12 +992,14 @@ body {
   height: 19px;
   left: 0px;
   position: absolute;
-  top: -3px;
+  top: 2px;
   width: 19px;
 }
 
-.filter__special input[type='checkbox']:hover + label::before {
+.filter__special input[type='checkbox']:hover + label::before,
+.filter__special input[type='checkbox']:focus + label::before {
   border: 2px solid #4f4f4f;
+  outline-color: transparent;
 }
 
 .filter__special input[type='checkbox'] + label::after {
@@ -943,7 +1008,7 @@ body {
   left: 7px;
   opacity: 0;
   position: absolute;
-  top: 1px;
+  top: 6px;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -955,7 +1020,8 @@ body {
   opacity: 1;
 }
 
-.filter__special input[type='checkbox']:hover + label::after {
+.filter__special input[type='checkbox']:hover + label::after,
+.filter__special input[type='checkbox']:focus + label::after {
   background: url(../images/checkbox-on-hover.svg) no-repeat -8px -5px;
 }
 
@@ -969,8 +1035,10 @@ body {
   width: 260px;
 }
 
-.filter__btn:hover {
+.filter__btn:hover,
+.filter__btn:focus {
   background: #dfdfdf;
+  outline-color: transparent;
 }
 
 .filter__btn:active {
@@ -1014,11 +1082,15 @@ body {
 }
 
 .sort__type:hover,
-.tri:hover {
+.tri:hover,
+.sort__type:focus,
+.tri:focus {
   opacity: .6;
+  outline-color: transparent;
 }
 
 .sort__type:active,
+.sort--active,
 .tri:active {
   opacity: 1;
 }
@@ -1071,15 +1143,18 @@ body {
 
 .project_block {
   background: url(../images/brow-normal.svg) no-repeat;
+  margin-bottom: 25px;
   padding-top: 40px;
   position: relative;
   width: 360px;
 }
 
-.project_block:hover {
+.project_block:hover,
+.project_block:focus {
   background: url(../images/browser.svg) no-repeat;
   -webkit-box-shadow: 6px 0 15px rgba(0, 0, 0, 0.3);
           box-shadow: 6px 0 15px rgba(0, 0, 0, 0.3);
+  outline-color: transparent;
 }
 
 .project__box {
@@ -1087,7 +1162,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background: #eeeeee;
-  bottom: 20px;
+  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1097,17 +1172,26 @@ body {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  opacity: 0;
   padding-bottom: 40px;
   position: absolute;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
   width: 360px;
-  z-index: 1;
+  z-index: 2;
 }
 
-.box--show {
+.box__wrapper {
+  background: transparent;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.box__wrapper:hover {
   opacity: 1;
 }
 
@@ -1136,8 +1220,10 @@ body {
   width: 200px;
 }
 
-.project__btn:hover {
+.project__btn:hover,
+.project__btn:focus {
   background: #e74246;
+  outline-color: transparent;
 }
 
 .project__btn:active {
@@ -1151,6 +1237,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  margin-left: -5px;
   padding-left: 0;
 }
 
@@ -1180,9 +1267,11 @@ body {
   width: 44px;
 }
 
-.pag__item:hover {
+.pag__item:hover,
+.pag__item:focus {
   background: #dfdfdf;
   border-color: #dfdfdf;
+  outline-color: transparent;
 }
 
 .pag__item:active {
@@ -1207,4 +1296,8 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.catalog--contact {
+  padding-top: 40px;
 }

@@ -10,7 +10,7 @@
   <body>
     <header class="header">
       <div class="container header_block">
-        <a href="#" class="header__logo">Logo</a>
+        <a href="index.html" class="header__logo">Logo</a>
         <nav>
           <ul class="header__nav">
             <li><a href="#" class="nav__item">Студия</a></li>
@@ -33,8 +33,12 @@
           <fieldset class="filter__cost">
             <legend class="filter__title">Стоймость:</legend>
             <div class="range__box">
-              <input type="range" id="range1" name="range1" step="10" min="1" max="7500" value="3500">
-              <input type="range" id="range2" class="range--two" step="10" min="7501" max="15000" name="range2" value="7300">
+              <div class="range_container">
+                <input type="range" id="range1" name="range1" step="10" min="1" max="7500" value="1">
+              </div>
+              <div class="range_container">
+                <input type="range" id="range2" class="range--two" step="10" min="7501" max="15000" name="range2" value="9300">
+                </div>
             </div>
             <div class="ouputs__box">
               <div class="output__box">
@@ -49,7 +53,7 @@
           </fieldset>
           <fieldset class="filter__type">
             <legend class="filter__title">Сетка:</legend>
-            <input type="radio" id="adaptive" name="type" value="adaptive">
+            <input type="radio" id="adaptive" name="type" value="adaptive" checked>
             <label for="adaptive">Адаптивная</label>
             <input type="radio" id="fix" name="type" value="fix">
             <label for="fix">Фиксированная</label>
@@ -58,11 +62,11 @@
           </fieldset>
           <fieldset class="filter__special">
             <legend class="filter__title">Особенности:</legend>
-            <input type="checkbox" id="slider" name="slider" value="slider">
+            <input type="checkbox" id="slider" name="slider" value="slider" checked>
             <label for="slider">Слайдер</label>
             <input type="checkbox" id="advantage" name="advantage" value="advantage">
             <label for="advantage">Блок преимуществ</label>
-            <input type="checkbox" id="news" name="news" value="news">
+            <input type="checkbox" id="news" name="news" value="news" checked>
             <label for="news">Новости</label>
             <input type="checkbox" id="gallery" name="gallery" value="gallery">
             <label for="gallery">Галерея</label>
@@ -76,7 +80,7 @@
       <section class="sort__block">
         <h2 class="sort__title">Сортировать</h2>
         <ul class="sort__options">
-          <li><a class="sort__type" href="#">По цене</a></li>
+          <li><a class="sort__type sort--active" href="#">По цене</a></li>
           <li><a class="sort__type" href="#">По типу</a></li>
           <li><a class="sort__type" href="#">По названию</a></li>
         </ul>
@@ -88,50 +92,62 @@
       <section class="projects__block">
         <div class="project_block">
           <img src="images/img-sedona.jpg" alt="sedona" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">Sedona</h3>
-            <p class="project__text">Информационный сайт для туристов</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">Sedona</h3>
+              <p class="project__text">Информационный сайт для туристов</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
         <div class="project_block">
           <img src="images/img-pink.jpg" alt="Pink" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">Pink app</h3>
-            <p class="project__text">Продуктовый лендинг приложения для iOS и Android</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">Pink app</h3>
+              <p class="project__text">Продуктовый лендинг приложения для iOS и Android</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
         <div class="project_block">
           <img src="images/img-barbershop.jpg" alt="Barbershop" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">Barbershop</h3>
-            <p class="project__text">Сайт салоны красоты. Для мужчин, да.</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">Barbershop</h3>
+              <p class="project__text">Сайт салоны красоты. Для мужчин, да.</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
         <div class="project_block">
           <img src="images/img-mishka.jpg" alt="Mishka" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">Mishka</h3>
-            <p class="project__text">Интернет-магазин вязаных игрушек</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">Mishka</h3>
+              <p class="project__text">Интернет-магазин вязаных игрушек</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
         <div class="project_block">
           <img src="images/img-aplus.jpg" alt="aplus" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">A PLUS</h3>
-            <p class="project__text">Лендинг курсов повышения квалификации</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">A PLUS</h3>
+              <p class="project__text">Лендинг курсов повышения квалификации</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
         <div class="project_block">
           <img src="images/img-kvast.jpg" alt="kvast" width="360" height="575">
-          <div class="project__box">
-            <h3 class="project__title">Кваст</h3>
-            <p class="project__text">Промо-сайт производителя крафтового кваса</p>
-            <button class="project__btn" type="button" name="button">9900 руб.</button>
+          <div class="box__wrapper">
+            <div class="project__box">
+              <h3 class="project__title">Кваст</h3>
+              <p class="project__text">Промо-сайт производителя крафтового кваса</p>
+              <button class="project__btn" type="button" name="button">9900 руб.</button>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +159,7 @@
       </ul>
       </div>
         </div>
-      <section class="contact">
+      <section class="contact catalog--contact">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123807!2d30.320894615830824!3d59.93879686904821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1546967512489" class="map__google" height="415" style="border:0" allowfullscreen></iframe>
           <div class="container contact_block">
           <section class="write-us_block">
